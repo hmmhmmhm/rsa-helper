@@ -1,5 +1,5 @@
 {
-    "name": "simple-rsa",
+    "name": "rsa-helper",
     "version": "1.0.0",
     "description": "📦 Encrypt / Decrypt / Sign / Extract / Verify",
     "scripts": {

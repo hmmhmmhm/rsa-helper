@@ -5,7 +5,7 @@ module.exports = {
     entry: './dist/index.js',
     output: {
         path: path.resolve(__dirname, 'export'),
-        filename: 'simple-rsa.js',
+        filename: 'rsa-helper.js',
         publicPath: './dist',
         libraryTarget: 'umd',
         libraryExport: 'default'
