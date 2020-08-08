@@ -98,22 +98,3 @@ export const verify = (
     )
     return _verify(signedObject.sign, message, publicKey, format)
 }
-
-(async () => {
-    const { privateKey, publicKey } = await generateKeyPair()
-    console.log(`\nprivateKey: ${privateKey}`)
-    console.log(`\npublicKey: ${publicKey}`)
-
-    const encrypted = encrypt('test', publicKey)
-    const decrypted = decrypt(encrypted, privateKey)
-    console.log(`\nencrypted: ${encrypted}`)
-    console.log(`\ndecrypted: ${decrypted}`)
-
-    const signed = sign('my public sign', privateKey)
-    const extracted = extract(signed)
-    const verified = verify(signed, 'my public sign', publicKey)
-
-    console.log(`\nsigned: ${signed}`)
-    console.log(`\nextracted:`, extracted)
-    console.log(`\nverified: ${verified}`)
-})()
